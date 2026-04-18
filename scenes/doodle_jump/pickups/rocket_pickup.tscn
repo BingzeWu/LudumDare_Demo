@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0h3hubqd1k2a"]
+
+[ext_resource type="Script" uid="uid://bxaxk0o1eqo6k" path="res://scripts/doodle_jump/pickups/rocket_pickup.gd" id="1_3ev1j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w31ui"]
+radius = 18.0
+
+[node name="RocketPickup" type="Area2D" unique_id=187760865]
+script = ExtResource("1_3ev1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1369658971]
+shape = SubResource("CircleShape2D_w31ui")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=73726024]
+color = Color(0.996078, 0.454902, 0.356863, 1)
+polygon = PackedVector2Array(18, 0, 16.9145, 6.15636, 13.7888, 11.5702, 9, 15.5885, 3.12567, 17.7265, -3.12567, 17.7265, -9, 15.5885, -13.7888, 11.5702, -16.9145, 6.15636, -18, -1.57361e-06, -16.9145, -6.15637, -13.7888, -11.5702, -8.99999, -15.5885, -3.12567, -17.7265, 3.12567, -17.7265, 9.00001, -15.5885, 13.7888, -11.5702, 16.9145, -6.15636)

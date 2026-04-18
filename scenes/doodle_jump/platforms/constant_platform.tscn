@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/doodle_jump/platforms/constant_platform.gd" id="1_ohhbw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wn90j"]
+size = Vector2(140, 24)
+
+[node name="ConstantPlatform" type="AnimatableBody2D"]
+script = ExtResource("1_ohhbw")
+tint = Color(0.494118, 0.858824, 0.572549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wn90j")
+one_way_collision = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-70, -12, 70, -12, 70, 12, -70, 12)
+color = Color(0.494118, 0.858824, 0.572549, 1)
