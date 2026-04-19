@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/signal_jump/signal_jump_content_generator.gd" id="1_content_generator"]
+
+[node name="SignalJumpContentGenerator" type="Node"]
+script = ExtResource("1_content_generator")

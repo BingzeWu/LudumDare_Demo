@@ -317,7 +317,6 @@ graph_offset = Vector2(-180.277, 49)
 [node name="MainMenu" unique_id=455022277 instance=ExtResource("1_sr523")]
 script = ExtResource("2_ixa71")
 level_select_packed_scene = null
-game_scene_path = "res://scenes/doodle_jump/doodle_jump_game.tscn"
 options_packed_scene = ExtResource("3_2k5l7")
 credits_packed_scene = ExtResource("4_vsp5b")
 

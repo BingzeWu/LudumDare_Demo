@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/signal_jump/platforms/platform_spawn_marker.gd" id="1_marker"]
+
+[node name="RedlineEchoChunk" type="Node2D"]
+
+[node name="PlatformSpawns" type="Node2D" parent="."]
+
+[node name="Platform01" type="Marker2D" parent="PlatformSpawns"]
+script = ExtResource("1_marker")
+
+[node name="Platform02" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(88, -136)
+script = ExtResource("1_marker")
+platform_type = "blue"
+
+[node name="Platform03" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-22, -284)
+script = ExtResource("1_marker")
+platform_type = "red"
+
+[node name="Platform04" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(84, -432)
+script = ExtResource("1_marker")
+
+[node name="Platform05" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-12, -580)
+script = ExtResource("1_marker")
+
+[node name="PlatformSupport" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-122, -116)
+script = ExtResource("1_marker")
+randomize_x = true
+x_random_range = 18.0
+
+[node name="PickupSpawns" type="Node2D" parent="."]
+
+[node name="Pickup01" type="Marker2D" parent="PickupSpawns"]
+position = Vector2(84, -484)
+
+[node name="ChunkEnd" type="Marker2D" parent="."]
+position = Vector2(0, -648)

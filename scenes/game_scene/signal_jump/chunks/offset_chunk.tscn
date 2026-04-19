@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://6g6nb1t1v5cs"]
+
+[ext_resource type="Script" uid="uid://bmfferj633iwu" path="res://scripts/signal_jump/platforms/platform_spawn_marker.gd" id="1_marker"]
+
+[node name="OffsetChunk" type="Node2D" unique_id=959262202]
+
+[node name="PlatformSpawns" type="Node2D" parent="." unique_id=2005374966]
+
+[node name="Platform01" type="Marker2D" parent="PlatformSpawns" unique_id=900510605]
+script = ExtResource("1_marker")
+
+[node name="Platform02" type="Marker2D" parent="PlatformSpawns" unique_id=1517566760]
+position = Vector2(128, -160)
+script = ExtResource("1_marker")
+platform_type = "orange"
+
+[node name="Platform03" type="Marker2D" parent="PlatformSpawns" unique_id=1316479095]
+position = Vector2(-120, -320)
+script = ExtResource("1_marker")
+platform_type = "red"
+
+[node name="Platform04" type="Marker2D" parent="PlatformSpawns" unique_id=1401129838]
+position = Vector2(48, -480)
+script = ExtResource("1_marker")
+
+[node name="PickupSpawns" type="Node2D" parent="." unique_id=2133995218]
+
+[node name="Pickup01" type="Marker2D" parent="PickupSpawns" unique_id=901900819]
+position = Vector2(48, -532)
+
+[node name="ChunkEnd" type="Marker2D" parent="." unique_id=1044446951]
+position = Vector2(0, -640)

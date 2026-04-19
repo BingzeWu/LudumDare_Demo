@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/signal_jump/platforms/platform_spawn_marker.gd" id="1_marker"]
+
+[node name="DriftLaneChunk" type="Node2D"]
+
+[node name="PlatformSpawns" type="Node2D" parent="."]
+
+[node name="Platform01" type="Marker2D" parent="PlatformSpawns"]
+script = ExtResource("1_marker")
+
+[node name="Platform02" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(78, -144)
+script = ExtResource("1_marker")
+
+[node name="Platform03" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-52, -292)
+script = ExtResource("1_marker")
+
+[node name="Platform04" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(94, -440)
+script = ExtResource("1_marker")
+
+[node name="Platform05" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-24, -588)
+script = ExtResource("1_marker")
+
+[node name="PlatformSupport01" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(-132, -120)
+script = ExtResource("1_marker")
+platform_type = "yellow"
+move_distance = 180.0
+move_speed = 110.0
+
+[node name="PlatformSupport02" type="Marker2D" parent="PlatformSpawns"]
+position = Vector2(132, -364)
+script = ExtResource("1_marker")
+randomize_x = true
+x_random_range = 32.0
+
+[node name="PickupSpawns" type="Node2D" parent="."]
+
+[node name="Pickup01" type="Marker2D" parent="PickupSpawns"]
+position = Vector2(-52, -344)
+
+[node name="ChunkEnd" type="Marker2D" parent="."]
+position = Vector2(0, -656)

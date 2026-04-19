@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bmkr4hmoj2tso"]
+
+[ext_resource type="Script" uid="uid://cxndpr3nr8xpc" path="res://scripts/signal_jump/signal_jump_game.gd" id="1_game"]
+[ext_resource type="PackedScene" path="res://scenes/game_scene/signal_jump/signal_jump_platform_pool.tscn" id="2_platform_pool"]
+[ext_resource type="PackedScene" path="res://scenes/game_scene/signal_jump/chunks/oscillation_gauntlet_chunk.tscn" id="3_12dho"]
+[ext_resource type="PackedScene" path="res://scenes/game_scene/signal_jump/signal_jump_pickup_pool.tscn" id="3_pickup_pool"]
+[ext_resource type="PackedScene" uid="uid://bn6bph5pp564m" path="res://scenes/game_scene/signal_jump/signal_jump_player.tscn" id="4_player"]
+[ext_resource type="PackedScene" path="res://scenes/game_scene/signal_jump/signal_jump_content_generator.tscn" id="5_content_generator"]
+
+[node name="SignalJumpGame" type="Node2D" unique_id=2095196234]
+script = ExtResource("1_game")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1008863700]
+layer = -5
+
+[node name="Background" type="ColorRect" parent="BackgroundLayer" unique_id=243153303]
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.17, 0.18, 0.22, 1)
+
+[node name="ContentGenerator" parent="." unique_id=91044192 instance=ExtResource("5_content_generator")]
+player_path = NodePath("../Player")
+platform_pool_path = NodePath("../Platforms")
+pickup_pool_path = NodePath("../Pickups")
+spawn_buffer_height = 1000.0
+initial_chunk_scene = ExtResource("3_12dho")
+
+[node name="Platforms" parent="." unique_id=1438769381 instance=ExtResource("2_platform_pool")]
+position = Vector2(-100, 0)
+
+[node name="Pickups" parent="." unique_id=665138642 instance=ExtResource("3_pickup_pool")]
+position = Vector2(-100, 0)
+
+[node name="Player" parent="." unique_id=111285419 instance=ExtResource("4_player")]
+position = Vector2(364, 1153)
+gravity = 0.0

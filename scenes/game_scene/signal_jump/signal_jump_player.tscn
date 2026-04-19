@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bn6bph5pp564m"]
+
+[ext_resource type="Script" uid="uid://bgwkhs2k2mjj" path="res://scripts/signal_jump/signal_jump_player.gd" id="1_player"]
+[ext_resource type="Script" uid="uid://brp8nvkef53fb" path="res://scripts/signal_jump/signal_strength_component.gd" id="2_signal_strength"]
+
+[sub_resource type="CapsuleShape2D" id="1_capsule"]
+radius = 18.0
+height = 48.0
+
+[node name="SignalJumpPlayer" type="CharacterBody2D" unique_id=1764662421]
+script = ExtResource("1_player")
+jump_velocity = -900.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2031831157]
+top_level = true
+
+[node name="SignalStrength" type="Node" parent="." unique_id=1774855186]
+script = ExtResource("2_signal_strength")
+starting_signal_percent = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SignalStrength" unique_id=1860305506]
+layer = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="SignalStrength/CanvasLayer" unique_id=2076335069]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 96.0
+
+[node name="PanelContainer" type="PanelContainer" parent="SignalStrength/CanvasLayer/MarginContainer" unique_id=1317299902]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SignalStrength/CanvasLayer/MarginContainer/PanelContainer" unique_id=1163824248]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="SignalStrength/CanvasLayer/MarginContainer/PanelContainer/VBoxContainer" unique_id=1095547044]
+layout_mode = 2
+text = "Signal"
+
+[node name="MeterLabel" type="Label" parent="SignalStrength/CanvasLayer/MarginContainer/PanelContainer/VBoxContainer" unique_id=1290182600]
+layout_mode = 2
+text = "███████░░░ 70%"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527963494]
+shape = SubResource("1_capsule")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1011211874]
+color = Color(0.97, 0.43, 0.37, 1)
+polygon = PackedVector2Array(-20, 22, 20, 22, 18, -10, 0, -30, -18, -10)

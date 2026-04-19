@@ -9,6 +9,7 @@ var animation_state_machine : AnimationNodeStateMachinePlayback
 @onready var level_select_button = %LevelSelectButton
 
 func new_game() -> void:
+	GameState.start_game()
 	load_game_scene()
 
 func intro_done() -> void:

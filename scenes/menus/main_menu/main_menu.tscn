@@ -9,12 +9,12 @@
 [node name="MainMenu" unique_id=1058120615 instance=ExtResource("1_ub2bi")]
 script = ExtResource("2_x31ro")
 level_select_packed_scene = null
-game_scene_path = "res://scenes/doodle_jump/doodle_jump_game.tscn"
+game_scene_path = "uid://clxs5gwisal5m"
 options_packed_scene = ExtResource("3_0jpat")
 credits_packed_scene = ExtResource("4_m0ubd")
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" parent_id_path=PackedInt32Array(556427956) index="0" unique_id=359406872]
-text = "Sky Hopper Prototype"
+text = "MainTitle"
 
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" parent_id_path=PackedInt32Array(2017477786) index="1" unique_id=2077321160]
 unique_name_in_owner = true
